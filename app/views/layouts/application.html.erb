@@ -7,16 +7,22 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <h1><%= link_to "Welcome to Pin Board！", root_path %></h1>
-
-
-
-  <%= link_to "About Us", about_path %>
-  <%= link_to "New Pin", new_pin_path %>
-  <%= link_to "Sign up", "#" %>
-
-
-<%= yield %>
-
-</body>
+  <header class="navbar navbar-fixed-top navbar-inverse">
+      <div class="navbar-inner">
+        <div class="container">
+          <%= link_to "Pin Board", root_path, id: "logo" %>
+          <nav>
+            <ul class="nav pull-right">
+              <li><%= link_to "About Us", about_path %></li>
+              <li><%= link_to "New Pin", new_pin_path %></li>
+              <li><%= link_to "Sign up", "#" %></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <div class="container">
+    <%= yield %>
+  </div>
+ </body>
 </html>
