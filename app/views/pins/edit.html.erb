@@ -1,5 +1,6 @@
+<%= notice %>
 Edit Pin
-<%= form_tag update_pin_path(@pin.id), method: 'patch' do %>
+<%= form_tag pin_path(@pin.id), method: 'patch' do %>
   Title
   <%= text_field_tag :title, @pin.title, class: "form-control title-field" %>
   Description

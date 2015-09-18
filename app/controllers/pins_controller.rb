@@ -1,29 +1,31 @@
 class PinsController < ApplicationController
-  def new
-  end
-
-  def create
-    @pin = Pin.new
-    @pin.title = params[:title]
-    @pin.description = params[:description]
-    @pin.save
-    redirect_to pin_path(@pin.id)
-  end
+  before_action :set_pin, only: [:show, :edit, :update, :destroy]
 
   def index
     @pins = Pin.all
   end
 
   def show
-    @pin = Pin.find(params[:id])
   end
 
+  def new
+    @pin = Pin.new
+  end
+
+  def create
+    @pin = Pin.new(pin_params)
+    if @pin.save
+      redirect_to @pin, notice: "Successfully created"
+    else
+      render :new
+    end
+  end
+
+
   def edit
-    @pin = Pin.find(params[:id])
   end
 
   def update
-    @pin = Pin.find(params[:id])
     @pin.title = params[:title]
     @pin.description = params[:description]
     @pin.save
@@ -31,8 +33,17 @@ class PinsController < ApplicationController
   end
 
   def destroy
-    @pin = Pin.find(params[:id])
     @pin.destroy
     redirect_to root_path #pins_path
+  end
+
+  private
+
+  def set_pin
+    @pin = Pin.find(params[:id])
+  end
+
+  def pin_params
+    params.require(:pin).permit(:title, :description)
   end
 end
