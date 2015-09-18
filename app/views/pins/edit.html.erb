@@ -1,0 +1,8 @@
+Edit Pin
+<%= form_tag update_pin_path(@pin.id), method: 'patch' do %>
+  Title
+  <%= text_field_tag :title, @pin.title, class: "form-control title-field" %>
+  Description
+  <%= text_area_tag :description, @pin.description, class: "form-control content-field" %>
+  <%= submit_tag "Save", class: "btn primary-btn" %>
+<% end %>

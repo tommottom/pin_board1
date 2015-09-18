@@ -1,0 +1,7 @@
+Title
+<p><%= @pin.title %></p>
+description
+<p><%= @pin.description %></p>
+
+<%= link_to "Edit", edit_pin_path(@pin.id), class: "btn edit_btn" %>
+<%= link_to "delete", destroy_pin_path(@pin.id), method: "delete", class: "btn destroy-btn", "data-confirm" => "Are You Sure？" %>
