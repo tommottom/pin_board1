@@ -7,13 +7,13 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <h1>Welcome to Pin Board！</h1>
+  <h1><%= link_to "Welcome to Pin Board！", root_path %></h1>
 
 
 
   <%= link_to "About Us", about_path %>
   <%= link_to "New Pin", new_pin_path %>
-  <%= link_to "Index", pins_path %>
+  <%= link_to "Sign up", "#" %>
 
 
 <%= yield %>
