@@ -7,20 +7,7 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <header class="navbar navbar-fixed-top navbar-inverse">
-      <div class="navbar-inner">
-        <div class="container">
-          <%= link_to "Pin Board", root_path, id: "logo" %>
-          <nav>
-            <ul class="nav pull-right">
-              <li><%= link_to "New Pin", new_pin_path %></li>
-              <li><%= link_to "About Us", about_path %></li>
-              <li><%= link_to "Sign up", signup_path %></li>
-            </ul>
-          </nav>
-        </div>
-      </div>
-    </header>
+  <%= render 'layouts/header' %>
     <div class="container">
       <% flash.each do |key, value| %>
         <div class="alert alert-<%= key %>"><%= value %></div>

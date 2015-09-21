@@ -12,9 +12,16 @@
 
 
   <h2>Title</h2>
+  <p>
   <%= f.text_field :title, {class: "form_control title-field"} %>
+  </p>
+
   <h2>Description</h2>
+  <p>
   <%= f.text_area :description, { class: "form_control content-field" } %>
-  <br/>
+  </p>
+
+  <p>
   <%= f.submit "Create Pin", { class: "btn btn-large btn-primary" } %>
+  </p>
 <% end %>
