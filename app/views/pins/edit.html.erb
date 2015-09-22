@@ -13,6 +13,9 @@
 
   <h2>Image</h2>
   <p>
+    <p>
+    <%= image_tag @pin.image.url(:medium) %>
+    </p>
     <%= f.file_field :image %>
   </p>
 
