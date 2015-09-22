@@ -11,6 +11,11 @@
   <% end %>
 
 
+  <h2>Image</h2>
+  <p>
+    <%= f.file_field :image %>
+  </p>
+
   <h2>Title</h2>
   <p>
   <%= f.text_field :title, {class: "form_control title-field"} %>
@@ -24,4 +29,6 @@
   <p>
   <%= f.submit "Create Pin", { class: "btn btn-large btn-primary" } %>
   </p>
+
+  <%= link_to "Cancel", root_url %>
 <% end %>
