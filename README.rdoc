@@ -1,28 +1,27 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+今回のアプリケーションは、打楽器音楽に当たる"マーチング"に関連した楽譜を収集するサイトとなる。
 
-Things you may want to cover:
+基本的な機能
 
-* Ruby version
+・ユーザー認証機能
+・ユーザーによる写真投稿の二つに分類され、ユーザー体験を高めるためのデザインをgem "masonry rails"
+などで行っている。
 
-* System dependencies
+なぜこのアプリが必要なのか？？
 
-* Configuration
+Snaresocience.comという米国の打楽器における総合サイトでは、ユーザーにおける自由な意見の交換や、
+楽譜の公開などが行なわれている。
+そのサイトにおいて楽譜の公開、交換はユーザーの自由ではあるが、それぞれの意見の交換や、楽譜の交換は
+スレッド方式で行なわれているため、ユーザーは容易に楽譜を見つけられない現状がある。
+同サイトの基本的なコンセプトは、意見交換にとどまっている為、もとより楽譜の公開、交換はサイトの機能として
+ユーザーに対して考慮されていない側面がある。
 
-* Database creation
+そのため、楽譜を視覚的にあつかうことのできるサイトが必要と感じ、作成した。
+何より、私個人が1ユーザーとして単純にほしいのである。
 
-* Database initialization
+課題点
 
-* How to run the test suite
+Twiiterや、instagram、pinterestでいいので代用可能では無いか？？という意見もあるのは予想される。
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+が、ニッチなサイトとしてまずはやっていきたい。
