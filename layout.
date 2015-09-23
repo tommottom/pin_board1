@@ -1,0 +1,86 @@
+<header class="navbar navbar-default navbar-fixed-top">
+    <div class="navbar-inner">
+      <div class="container">
+        <%= link_to "Pin Board", root_path, id: "logo" %>
+        <nav>
+          <ul class="nav pull-right">
+            <% if signed_in? %>
+              <li><%= link_to "New Pin", new_pin_path %></li>
+              <li><%= link_to "About Us", about_path %></li>
+              <li><%= link_to "Settings", edit_user_path(current_user) %></li>
+              <li><%= link_to "Sign out", signout_path, method: "delete" %></li>
+            <% else %>
+             <li><%= link_to "Sign up", signup_path %></li>
+             <li><%= link_to "Sign in", signin_path %></li>
+            <% end %>
+          </ul>
+        </nav>
+      </div>
+    </div>
+</header>
+
+
+/* universal */
+
+html {
+  overflow-y: scroll;
+}
+
+body {
+  padding-top: 60px;
+}
+
+section {
+  overflow: auto;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.center {
+  text-align: center;
+}
+
+.center h1 {
+  margin-bottom: 10px;
+}
+
+/* typography */
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1;
+}
+
+
+/* header */
+
+#logo {
+  float: left;
+  margin-right: 10px;
+  font-size: 1.7em;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  color: #fff;
+  padding-top: 9px;
+  font-weight: bold;
+  line-height: 1;
+}
+
+#logo:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+#error_explanation {
+  color: #f00;
+  ul {
+    list-style: none;
+    margin: 0 0 18px 0;
+  }
+}
+
+.field_with_errors {
+  @extend .control-group;
+  @extend .error;
+}
