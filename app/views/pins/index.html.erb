@@ -2,3 +2,5 @@
 <%= link_to (image_tag pin.image.url(:medium)) %>
 <h1><%= link_to pin.title, pin_path(pin.id) %></h1>
 <% end %>
+
+<%= paginate @pins %>
