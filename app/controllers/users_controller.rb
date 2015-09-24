@@ -14,8 +14,7 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     if @user.save
       sign_in @user
-      flash.now[:success] = "Welcome to the Pin Board!"
-      redirect_to root_path #@user
+      redirect_to root_path, notice: "Welcome to the Music Note!!"
     else
       render 'new'
     end
@@ -28,8 +27,7 @@ class UsersController < ApplicationController
 
   def update
     if @user.update_attributes(user_params)
-      flash.now[:success] = "Profile updated"
-      redirect_to root_path
+      redirect_to root_path, notice: "Profile updated!!"
     else
       render 'edit'
     end
