@@ -15,7 +15,7 @@ class PinsController < ApplicationController
   def create
     @pin = Pin.new(pin_params)
     if @pin.save
-      redirect_to @pin, notice: "Successfully created New Pin"
+      redirect_to @pin, notice: "Successfully created New Music"
     else
       render :new
     end
@@ -27,7 +27,7 @@ class PinsController < ApplicationController
 
   def update
     if @pin.update(pin_params)
-      redirect_to @pin, notice: "Successfully recreated New Pin"
+      redirect_to @pin, notice: "Successfully recreated New Music"
     else
       render :edit
     end
