@@ -1,11 +1,13 @@
-<h2>Title</h2>
+<h1>Title</h1>
+<h4><%= @pin.title %></h4>
+
 
 <h4><%= image_tag @pin.image.url(:large) %>
-
-<h4><%= @pin.title %></h4>
-<h2>description</h2>
+<h1>description</h1>
 <h4><%= @pin.description %></h4>
 
+<% if signed_in? %>
 <%= link_to "Edit", edit_pin_path(@pin.id), class: "btn edit_btn" %>
 <%= link_to "delete", pin_path(@pin.id), method: "delete", class: "btn destroy-btn", "data-confirm" => "Are You Sure？" %>
+<% end %>
 <%= link_to "Back", root_path, class: "btn back_btn" %>
