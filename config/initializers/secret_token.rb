@@ -9,4 +9,20 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-PinBoard1::Application.config.secret_key_base = '55293a799c7d37f3c6ee4c3314efede7350636354e9d6afdbdb4f0c6c2af9c39c35f04ef4875f9e459755bd42d610f6c6d643d6e2644b1c066d45660b1f9182d'
+require 'securerandom'
+
+def secure_token
+  token_file = Rails.root.join('.secret')
+  if File.exist?(token_file)
+    # Use the existing token.
+    File.read(token_file).chomp
+  else
+    # Generate a new token and store it in token_file.
+    token = SecureRandom.hex(64)
+    File.write(token_file, token)
+    token
+  end
+end
+
+
+PinBoard1::Application.config.secret_key_base = secure_token
