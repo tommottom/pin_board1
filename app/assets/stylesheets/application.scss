@@ -16,6 +16,15 @@
 
 
 
+.item {
+  width: 350px;
+  margin: 5px;
+  padding: 15px;
+  background-color: #eef2f3;
+  box-shadow: 0 1px 3px rgba(34, 25, 25, 0.4);
+}
+
+
 
 /* universal */
 
@@ -82,3 +91,18 @@ h1, h2, h3, h4, h5, h6 {
   @extend .control-group;
   @extend .error;
 }
+
+/*masonry-railsを使う場合、ページネーションを最下部に指定する必要性
+があるため、下記コードが必要となる。
+
+<div id="footer">
+</div>
+
+#footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+}
+
+*/

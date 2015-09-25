@@ -1,6 +1,10 @@
-<% @pins.each do |pin| %>
-<%= link_to (image_tag pin.image.url(:medium)) %>
-<h1><%= link_to pin.title, pin_path(pin.id) %></h1>
-<% end %>
+<div class="masonry">
+  <% @pins.each do |pin| %>
+  <div class="item">
+    <%= image_tag pin.image.url(:medium) %>
+    <h1><%= link_to pin.title, pin_path(pin.id) %></h1>
+  </div>
+  <% end %>
+</div>
 
 <%= paginate @pins %>
