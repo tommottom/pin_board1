@@ -15,14 +15,28 @@
 @import "bootstrap";
 
 
+body {
+
+  background: -webkit-linear-gradient(90deg, #ee9ca7 10%, #ffdde1 90%); /* Chrome 10+, Saf5.1+ */
+  background:    -moz-linear-gradient(90deg, #ee9ca7 10%, #ffdde1 90%); /* FF3.6+ */
+  background:     -ms-linear-gradient(90deg, #ee9ca7 10%, #ffdde1 90%); /* IE10 */
+  background:      -o-linear-gradient(90deg, #ee9ca7 10%, #ffdde1 90%); /* Opera 11.10+ */
+  background:         linear-gradient(90deg, #ee9ca7 10%, #ffdde1 90%); /* W3C */
+}
+
+
 
 .item {
   width: 350px;
   margin: 5px;
   padding: 15px;
-  background-color: #eef2f3;
+  background-color: #eef2f3 ;
   box-shadow: 0 1px 3px rgba(34, 25, 25, 0.4);
 }
+
+/*
+ #eef2f3 いい感じな灰色？？
+*/
 
 
 
