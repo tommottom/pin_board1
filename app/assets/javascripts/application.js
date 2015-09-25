@@ -14,3 +14,6 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+
+// http://masonry.desandro.com/masonry.pkgd.js added as external resource

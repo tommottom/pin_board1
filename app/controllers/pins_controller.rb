@@ -2,7 +2,7 @@ class PinsController < ApplicationController
   before_action :set_pin, only: [:show, :edit, :update, :destroy]
 
   def index
-    @pins = Pin.all.order("created_at DESC").page(params[:page]).per(5)
+    @pins = Pin.all.order("created_at DESC").page(params[:page]).per(3)
   end
 
   def show

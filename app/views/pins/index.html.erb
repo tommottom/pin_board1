@@ -1,4 +1,4 @@
-<div class="masonry">
+<div class="masonry js-masonry"  data-masonry-options='{ "columnWidth": 60 }'>
   <% @pins.each do |pin| %>
   <div class="item">
     <%= image_tag pin.image.url(:medium) %>
@@ -7,4 +7,6 @@
   <% end %>
 </div>
 
+<div id="footer">
 <%= paginate @pins %>
+</div>
