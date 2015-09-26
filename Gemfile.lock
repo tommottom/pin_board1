@@ -131,7 +131,7 @@ DEPENDENCIES
   hirb (= 0.7.3)
   jbuilder (~> 1.2)
   jquery-rails
-  kaminari
+  kaminari (~> 0.16.3)
   paperclip (~> 4.3.1)
   rails (= 4.0.5)
   sass-rails (~> 4.0.3)
