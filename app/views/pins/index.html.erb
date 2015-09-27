@@ -2,7 +2,7 @@
   <% @pins.each do |pin| %>
   <div class="item">
     <%= image_tag pin.image.url(:medium) %>
-    <h1><%= link_to pin.title, pin_path(pin.id) %></h1>
+    <h2><%= link_to pin.title, pin_path(pin.id) %></h2>
   </div>
   <% end %>
 </div>
