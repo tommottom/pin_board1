@@ -15,6 +15,10 @@ gem 'bcrypt-ruby', '3.1.2'
 gem 'paperclip', '~> 4.3.1'
 gem 'kaminari', '~> 0.16.3'
 
+group :production do
+  gem 'mysql2'
+end
+
 group :doc do
   gem 'sdoc', require: false
 end
